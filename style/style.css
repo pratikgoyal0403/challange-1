@@ -1,0 +1,360 @@
+* {
+  padding: 0rem;
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+}
+body {
+  padding: 3rem;
+  background-image: url("../design/desktop-preview.jpg");
+  background-size: cover;
+}
+/* //LANDING PAGE PROPERTIES */
+.landing-page {
+  width: 80%;
+  height: 90vh;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.603);
+  background-color: white;
+  margin: auto;
+}
+/* TEXT CONTENT CONTAINER PROPERTIES */
+.landing-page-text {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      135deg,
+      hsla(0, 80%, 86%, 0.15),
+      hsla(0, 0%, 100%, 0.74),
+      rgba(248, 191, 191, 0.103),
+      hsla(0, 100%, 98%, 0.432)
+    ),
+    url("../images/bg-pattern-desktop.svg");
+  background-size: cover;
+}
+/* IMAGE CONTAINER PROPERTIES */
+.landing-page-image {
+  height: 100%;
+  padding: 0px;
+  width: 40%;
+  background-image: url("../images/hero-desktop.jpg");
+  background-size: cover;
+}
+
+/* TEXT ITEM PROPERTIES */
+.text-items {
+  position: absolute;
+  left: 15rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40rem;
+}
+/* LOGO PROPERTY */
+.logo {
+  position: absolute;
+  left: 30rem;
+  top: 8rem;
+  z-index: 100;
+}
+/* HEADING PROPERTIES HERE */
+.primary-heading {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  margin-bottom: 2rem;
+}
+.primary-heading span:nth-child(1) {
+  font-weight: 300;
+  display: block;
+  width: fit-content;
+  color: hsl(0, 36%, 70%);
+}
+.primary-heading span:nth-child(2) {
+  display: block;
+  width: fit-content;
+  letter-spacing: 1.5rem;
+}
+.brand-info .info-para {
+  font-size: 1.6rem;
+  color: hsl(0, 36%, 70%);
+  margin-bottom: 2rem;
+}
+/* EMAIL CONTACT FORM */
+.email {
+  margin-top: 1rem;
+  width: fit-content;
+  position: relative;
+  /* border: 2px solid red; */
+}
+.email-feild {
+  width: 40rem;
+  height: 5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  border-radius: 10rem;
+  background-color: transparent;
+  border: 1px solid rgba(194, 194, 194, 0.616);
+}
+.email-feild::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.email-feild:focus {
+  outline: none;
+  background-color: transparent;
+}
+.submit-btn {
+  width: 10rem;
+  height: 5rem;
+  border-radius: 3rem;
+  background-image: linear-gradient(
+    to right,
+    hsla(0, 80%, 86%, 0.596),
+    hsl(0, 80%, 86%)
+  );
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  text-align: center;
+  cursor: pointer;
+  /* box-shadow: 1px 1px 10px hsla(0, 36%, 70%, 0.562); */
+  transition: transform 50ms linear;
+}
+
+.submit-btn:active,
+.submit:focus {
+  transform: translateY(2px);
+  outline: none;
+}
+.submit-btn img {
+  margin-top: 1.2rem;
+}
+/* ERROR TEXT AND ICON */
+.error-icon {
+  position: absolute;
+  display: none;
+  right: 30%;
+  top: 18%;
+}
+.error-text {
+  margin: 1rem 2rem;
+  font-size: 1.2rem;
+  color: palevioletred;
+  display: none;
+}
+footer {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  height: 1;
+  width: 100%;
+  background-color: hsl(0, 80%, 86%);
+  text-align: center;
+}
+/* MEDIA QUERIES FOR TABLET DEVICE */
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  body {
+    padding: 0px;
+  }
+  .landing-page {
+    width: 100%;
+    height: 100vh;
+  }
+  .landing-page-text {
+    width: 50%;
+  }
+  .landing-page-image {
+    width: 50%;
+    background-size: cover;
+  }
+  .logo {
+    top: 5%;
+    left: 10%;
+  }
+  .text-items {
+    left: 0%;
+    padding: 1rem;
+    margin: auto;
+  }
+  .info-para {
+    width: 90%;
+  }
+  .email {
+    width: 90%;
+  }
+  .email-feild {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERIES FOR PHABLETS AND MOBILES*/
+@media screen and (max-width: 899px) {
+  body {
+    padding: 0px;
+    background-image: none;
+  }
+  .landing-page {
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: none;
+  }
+  .landing-page-text {
+    order: 2;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .landing-page-image {
+    order: 1;
+    margin-top: 8vh;
+    width: 100%;
+    height: 40%;
+    background-image: url("../images/hero-mobile.jpg");
+    background-size: cover;
+  }
+  .logo {
+    display: block;
+    width: 100vw;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 8vh;
+    background-image: linear-gradient(
+      to right,
+      hsl(0, 80%, 86%),
+      hsl(0, 80%, 86%)
+    );
+    padding: 1rem;
+  }
+  .text-items {
+    left: 0px;
+    text-align: center;
+    top: 35%;
+    padding: 1rem;
+    width: 100%;
+  }
+  .primary-heading {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .primary-heading span {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .info-para {
+    font-size: 1.6rem;
+    width: 80%;
+    margin: auto;
+  }
+  .email {
+    margin: auto;
+  }
+  .email-feild {
+    width: 30rem;
+    margin: auto;
+  }
+  .error-text {
+    margin-left: 0px;
+  }
+  .error-icon {
+    right: 35%;
+  }
+  footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 899px) and (orientation: landscape) {
+  .logo {
+    height: 14vh;
+  }
+  .landing-page-image {
+    height: 80%;
+  }
+  .landing-page-text {
+    height: 120vh;
+  }
+  .text-items {
+    top: 40%;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES
+@media screen and (max-width: 580px) {
+  body {
+    padding: 0px;
+  }
+  .landing-page {
+    flex-wrap: wrap;
+  }
+  .landing-page-text {
+    order: 2;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .landing-page-image {
+    order: 1;
+    margin-top: 8vh;
+    width: 100%;
+    height: 40%;
+    background-image: url("../images/hero-mobile.jpg");
+    background-size: cover;
+  }
+  .logo {
+    display: block;
+    width: 100vw;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 8vh;
+    background-color: hsl(0, 36%, 70%);
+    padding: 1rem;
+  }
+  .text-items {
+    left: 0px;
+    text-align: center;
+    top: 35%;
+    padding: 1rem;
+    width: 100%;
+  }
+  .primary-heading {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .primary-heading span {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .info-para {
+    font-size: 1.6rem;
+    width: 80%;
+    margin: auto;
+  }
+  .email {
+    margin: auto;
+  }
+  .email-feild {
+    width: 30rem;
+    margin: auto;
+  }
+  .error-text {
+    margin-left: 0px;
+  }
+} */
